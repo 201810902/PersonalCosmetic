@@ -1,0 +1,20 @@
+.category {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.info_section {
+    display: flex;
+}
+
+.line {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: black;
+}
+
+.online_link:hover {
+    color: blueviolet;
+}
