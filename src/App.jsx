@@ -1,38 +1,25 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import Season from "./components/Season";
 import "./App.css";
-import SearchBar from "./components/Searchbar";
+import SearchBar from "./components/SearchBar";
+import Home from "./pages/Home";
+import Lips from "./pages/Lips";
+import Palettes from "./pages/Palettes";
+import Header from "./components/Header";
+import PersonalColor from "./pages/PersonalColor";
 function App() {
+  // const nav = useNavigate();
+
   return (
     <>
-      <h1>Personal Color</h1>
-      <div>
-        <p>퍼스널컬러</p>
-        <select name="season" id="">
-          <option value="spring">봄</option>
-          <option value="summer">여름</option>
-          <option value="fall">가을</option>
-          <option value="winter">겨울</option>
-        </select>
-        <select name="tone" id="">
-          <option value="spring">페일/라이트</option>
-          <option value="summer">소프트/뮤트</option>
-          <option value="fall">다크/딥</option>
-        </select>
-      </div>
-      <div>
-        {" "}
-        <p>제품</p>
-        <select name="" id="">
-          <option value="립">립</option>
-        </select>
-        <select name="" id="">
-          <option value="">스틱</option>
-          <option value="">틴트</option>
-        </select>
-      </div>
-      <SearchBar />
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/lips" element={<Lips />} />
+        <Route path="/palettes" element={<Palettes />} />
+        <Route path="/personalcolor" element={<PersonalColor />} />
+        {/* <Route path="*" element={<Notfound />} /> */}
+      </Routes>
     </>
   );
 }
