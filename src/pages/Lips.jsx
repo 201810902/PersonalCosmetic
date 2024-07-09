@@ -1,9 +1,30 @@
+import React, { useState, useEffect } from "react";
 import Season from "./../components/Season";
 import SearchBar from "./../components/SearchBar";
-
+import Header from "../components/Header";
 import "./Lips.css";
+import { Firestore } from "firebase/firestore";
 
 const Lips = () => {
+  const [sortType, setSortType] = useState("priceLowSort");
+  const [viewType, setViewType] = useState("listView");
+  const [inputValue, setInputValue] = useState("");
+
+  const handleClickLowPrice = (e) => {
+    setSortType("priceLowSort");
+  };
+
+  const handleClickPopular = (e) => {
+    setSortType("popularSort");
+  };
+  const handleClickList = (e) => {
+    setViewType("listView");
+    //grid, list 스프라이트랑 변수가 크로스로 좀 꼬였는데 나중에 해결해야댐
+  };
+  const handleClickGrid = (e) => {
+    setViewType("gridView");
+  };
+
   const mockData = {
     id: 1,
     brands: "peripera",
@@ -12,11 +33,52 @@ const Lips = () => {
     price: 14000,
     detail: "설명",
   };
+
   return (
-    <>
+    <div className="lips">
+      <Header />
       <div className="category">
         <Season />
         <SearchBar />
+      </div>
+      <div className="listContent">
+        <div className="view">
+          <span className="sort">
+            <a
+              className={`sortFilter ${
+                sortType === "priceLowSort" ? "activePink" : "default"
+              }`}
+              onClick={handleClickLowPrice}
+            >
+              가격 낮은순
+            </a>
+            <a
+              className={`sortFilter ${
+                sortType === "popularSort" ? "activePink" : "default"
+              }`}
+              onClick={handleClickPopular}
+            >
+              찜 많은 순
+            </a>
+          </span>
+
+          <div className="viewButton">
+            <a
+              href="#"
+              onClick={handleClickList}
+              className={`spriteLink ${
+                viewType === "listView" ? "listView" : "nonListView"
+              }`}
+            ></a>
+            <a
+              href="#"
+              onClick={handleClickGrid}
+              className={`spriteLink ${
+                viewType === "gridView" ? "gridView" : "nonGridView"
+              }`}
+            ></a>
+          </div>
+        </div>
       </div>
       <div className="info_section">
         <div className="product_id">1</div>
@@ -42,9 +104,10 @@ const Lips = () => {
           올리브영
         </div>
       </div>
+
       <button>{`<`}</button>
       <button>{`>`}</button>
-    </>
+    </div>
   );
 };
 export default Lips;

@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
+import colorchip from "../assets/color_icon.svg";
+import "./Header";
+
 const Header = () => {
   return (
     <>
       <Link to="/">
-        <h1>Personal Color💄</h1>
+        <h1 className="header">Personal Color</h1>
       </Link>
     </>
   );

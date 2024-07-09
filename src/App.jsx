@@ -7,12 +7,10 @@ import Lips from "./pages/Lips";
 import Palettes from "./pages/Palettes";
 import Header from "./components/Header";
 import PersonalColor from "./pages/PersonalColor";
-function App() {
-  // const nav = useNavigate();
 
+function App() {
   return (
     <>
-      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/lips" element={<Lips />} />

@@ -11,12 +11,15 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 a {
-  font-weight: 500;
+  display: block;
+  width: fit-content;
   color: #ff64d0;
   text-decoration: inherit;
+  font-size: small;
 }
 
 a:hover {
@@ -26,14 +29,15 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  /* place-items: center; */
+  min-width: 360px;
   min-height: 100vh;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  width: fit-content;
 }
 
 button {
@@ -62,7 +66,7 @@ select {
   background-color: #da81bf;
   border: none;
   height: 30px;
-  width: fit-content;
+
 }
 
 @media (prefers-color-scheme: light) {
@@ -71,9 +75,9 @@ select {
     background-color: #ffffff;
   }
 
-  a:hover {
+  /* a:hover {
     color: #747bff;
-  }
+  } */
 
   button {
     background-color: #f9f9f9;

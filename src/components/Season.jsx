@@ -1,4 +1,5 @@
-import { useRef } from "react";
+import React, { useState, useRef } from "react";
+import "./Season.css";
 
 const season = {
   spring: {
@@ -22,11 +23,15 @@ const season = {
 // const undertone
 
 const Season = () => {
-  const season = useRef("value");
+  // const season = useRef("value");
+  const [season, setSeason] = useState("");
+  const [brightness, setBrightness] = useState(false);
+
   return (
     <>
-      <div>
-        <select name="season" id="">
+      <div className="season">
+        <select name="season" className="foruSeason" id="">
+          <option value="default"> 선택하세요</option>
           <option value={season}>봄</option>
           <option value="summer">여름</option>
           <option value="fall">가을</option>
