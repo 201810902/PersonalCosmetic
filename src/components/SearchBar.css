@@ -1,5 +1,18 @@
 input {
     border-style: none;
     border-radius: 0;
+    /* margin-bottom: 10px; */
+    width: 300px;
+    margin-right: 5px;
     height: 40px;
 }
+
+input::placeholder {
+    text-align: center;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+}
+

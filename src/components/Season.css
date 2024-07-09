@@ -1,3 +1,16 @@
 select {
     background-color: lightgray;
+    margin: 5px;
+    width: 100px;
+    text-align: center;
+    font-weight: 7ㅣ그00;
+    border-radius: 1.5px;
 }
+
+/* 셀렉트박스 커스텀이 안먹힌다..
+.fourSeason {
+    -o-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+} */

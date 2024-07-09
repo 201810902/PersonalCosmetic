@@ -13,10 +13,14 @@ const SearchBar = () => {
   //     setContent("");
   //   };
   return (
-    <>
-      <input label="제품 검색" type="search" placeholder="입력하세요" />
+    <div className="searchBar">
+      <input
+        label="제품 검색"
+        type="search"
+        placeholder="검색어를 입력하세요"
+      />
       <button>검색</button>
-    </>
+    </div>
   );
 };
 export default SearchBar;

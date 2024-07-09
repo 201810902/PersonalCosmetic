@@ -1,8 +1,26 @@
+.lips {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.listContent {
+    width: 150vh;
+    display: flex;
+    justify-items: center;
+    border-top: 1px solid #ff64d0;
+    border-bottom: 1px solid #ff64d0;
+}
+
 .category {
     display: flex;
     gap: 10px;
     text-align: center;
-    justify-content: center;
+    justify-items: center;
+    margin: 10px;
+    align-items: center;
+
 }
 
 .info_section {
@@ -15,6 +33,67 @@
     color: black;
 }
 
+.view {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    width: 210%;
+
+}
+
+.sort {
+    display: flex;
+
+}
+
+.sortFilter {
+    padding: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.activePink {
+    color: pink;
+}
+
+.default {
+    color: white;
+}
+
+.viewButton {
+    display: flex;
+
+}
+
 .online_link:hover {
     color: blueviolet;
+}
+
+.spriteLink::after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../assets/bg_sorting.png);
+    margin: 4px;
+}
+
+.listView::after {
+    background-position: -28px 0.5px;
+
+}
+
+.gridView::after {
+    background-position: -0.5px -28px;
+
+}
+
+.nonGridView::after {
+    background-position: 0 0;
+}
+
+.nonListView::after {
+    background-position: -28px -28px;
+
 }
